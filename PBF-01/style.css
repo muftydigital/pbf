@@ -1,4 +1,5 @@
+/* Mengatur ukuran halaman supaya memenuhi seluruh layar */
 html, body {
-  height: 100%;
-  width: 100%;
+  height: 100%; /* Tinggi halaman dibuat 100% dari layar */
+  width: 100%; /* Lebar halaman dibuat 100% dari layar */
 }
