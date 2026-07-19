@@ -1,0 +1,11 @@
+/* Mengatur tampilan pembungkus utama pada komponen App */
+.App {
+  /* Membuat teks berada di tengah secara horizontal */
+  text-align: center;
+
+  /* Memberikan jarak dari bagian atas halaman */
+  margin-top: 50px;
+
+  /* Menggunakan jenis font yang umum tersedia pada sistem */
+  font-family: Arial, sans-serif;
+}
