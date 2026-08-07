@@ -1,0 +1,5 @@
+# Perintah ini dijalankan saat tombol Run ditekan.
+run = "npm run dev -- --host 0.0.0.0"
+
+# File awal dari aplikasi React.
+entrypoint = "src/index.jsx"

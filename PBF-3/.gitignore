@@ -1,0 +1,10 @@
+# Folder dependensi tidak perlu masuk ke Git.
+node_modules
+# File bawaan macOS juga tidak perlu disimpan.
+.DS_Store
+# Folder hasil build Vite.
+dist
+# Folder hasil build SSR kalau nanti dibuat.
+dist-ssr
+# Abaikan file konfigurasi lokal.
+*.local
