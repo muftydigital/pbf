@@ -1,0 +1,18 @@
+# Sediakan Node.js saat proyek dijalankan maupun dipublikasikan.
+modules = ["nodejs-20"]
+
+# Jalankan server produksi secara langsung tanpa bergantung pada npm.
+run = "node server.js"
+
+# server.js menjadi file awal aplikasi pada Replit.
+entrypoint = "server.js"
+
+# Atur perintah yang dipakai oleh Autoscale Deployment.
+[deployment]
+run = ["node", "server.js"]
+deploymentTarget = "cloudrun"
+
+# Hubungkan port aplikasi dengan port web Replit.
+[[ports]]
+localPort = 3000
+externalPort = 80
