@@ -1,0 +1,32 @@
+{
+  "name": "pbf-7-todo-list",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Praktikum Pemrograman Framework pertemuan 7 tentang Todo List dan Material UI",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "start": "node server.js",
+    "build": "node scripts/clean-dist.js && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "keywords": [
+    "react",
+    "todo",
+    "material-ui",
+    "pbf"
+  ],
+  "author": "Ali Mufty Ramdhani",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.9",
+    "@mui/material": "7.3.9",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.7.0",
+    "vite": "6.4.3"
+  }
+}
