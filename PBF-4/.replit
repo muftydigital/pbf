@@ -1,0 +1,10 @@
+# Perintah yang dijalankan saat tombol Run ditekan.
+run = "npm run dev -- --host 0.0.0.0"
+
+# File awal aplikasi React.
+entrypoint = "src/index.jsx"
+
+# Pengaturan ini dipakai saat proyek dipublikasikan dengan Autoscale.
+[deployment]
+run = ["sh", "-c", "npm run dev -- --host 0.0.0.0"]
+deploymentTarget = "cloudrun"
