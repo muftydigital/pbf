@@ -1,30 +1,32 @@
 {
-  "name": "react-typescript",
+  "name": "pbf-7-todo-list",
   "version": "1.0.0",
   "type": "module",
-  "description": "React TypeScript on Replit, using Vite bundler",
+  "description": "Praktikum Pemrograman Framework pertemuan 7 tentang Todo List dan Material UI",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "start": "node server.js",
+    "build": "node scripts/clean-dist.js && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "todo",
+    "material-ui",
+    "pbf"
+  ],
+  "author": "Ali Mufty Ramdhani",
   "license": "ISC",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.16",
-    "@mui/material": "^5.10.17"
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.9",
+    "@mui/material": "7.3.9",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.7.4",
-    "typescript-language-server": "^0.11.2",
-    "vite": "^3.1.4"
+    "@vitejs/plugin-react": "4.7.0",
+    "vite": "6.4.3"
   }
 }

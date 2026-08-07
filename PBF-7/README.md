@@ -1,17 +1,28 @@
-## Running React on Repl.it
+# PBF Pertemuan 7
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+Praktikum ini membahas pembuatan aplikasi Todo List menggunakan React, custom hook, dan komponen Material UI. Komentar pada kode ditulis berdasarkan pemahaman saya agar fungsi setiap bagian lebih mudah dipelajari kembali.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+## Isi Praktikum
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+- `App.jsx` menggabungkan formulir dan daftar todo.
+- `TodoForm.jsx` menerima teks todo dari pengguna.
+- `TodoList.jsx` menampilkan todo menggunakan komponen Material UI.
+- `useInputState.js` mengatur nilai dan reset kolom input.
+- `useTodoState.js` menyimpan, menambahkan, dan menghapus todo.
+- `scripts/clean-dist.js` membersihkan hasil lama sebelum build dijalankan.
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
+## Menjalankan Proyek
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+```bash
+npm install
+npm run dev
+```
 
-### Typescript
+Untuk membuat dan menjalankan versi produksi:
 
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+```bash
+npm run build
+npm run start
+```
+
+Proyek sudah dilengkapi `.replit`, `server.js`, dan hasil build di folder `dist` agar dapat langsung dijalankan serta dipublikasikan melalui Replit pada port 3000.
