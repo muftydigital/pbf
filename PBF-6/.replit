@@ -1,0 +1,18 @@
+# Sediakan Node.js pada saat proyek dijalankan dan dipublikasikan.
+modules = ["nodejs-20"]
+
+# Jalankan server produksi secara langsung tanpa perintah npm.
+run = "node server.js"
+
+# Gunakan server.js sebagai file awal aplikasi.
+entrypoint = "server.js"
+
+# Pengaturan berikut dipakai oleh Autoscale Deployment.
+[deployment]
+run = ["node", "server.js"]
+deploymentTarget = "cloudrun"
+
+# Hubungkan port aplikasi dengan port web Replit.
+[[ports]]
+localPort = 3000
+externalPort = 80

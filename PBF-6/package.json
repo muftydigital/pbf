@@ -1,0 +1,30 @@
+{
+  "name": "pbf-6-api-router",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Praktikum Pemrograman Framework pertemuan 6 tentang API dan React Router",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "start": "node server.js",
+    "build": "node scripts/clean-dist.js && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "keywords": [
+    "react",
+    "axios",
+    "router",
+    "pbf"
+  ],
+  "author": "Ali Mufty Ramdhani",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "1.19.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "5.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.7.0",
+    "vite": "6.4.3"
+  }
+}

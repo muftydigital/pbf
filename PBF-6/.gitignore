@@ -1,0 +1,13 @@
+# Folder dependency dapat dibuat kembali melalui npm install.
+node_modules
+
+# File bawaan sistem operasi tidak perlu disimpan.
+.DS_Store
+
+# Hasil build server-side tidak dipakai pada praktikum ini.
+dist-ssr
+
+# Abaikan file pengaturan lokal milik masing-masing perangkat.
+*.local
+
+# Folder dist sengaja disertakan agar hasil build ikut saat diunggah ke Replit.
