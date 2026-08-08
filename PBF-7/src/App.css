@@ -1,0 +1,31 @@
+/* Atur tampilan pembungkus utama aplikasi Todo. */
+.App {
+  /* Gunakan jenis huruf sederhana yang mudah dibaca. */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Buat seluruh teks utama berada di tengah. */
+  text-align: center;
+  /* Batasi lebar agar form dan daftar tidak terlalu panjang. */
+  max-width: 640px;
+  /* Posisikan aplikasi di tengah halaman. */
+  margin: 40px auto;
+  /* Beri ruang pada sisi kiri dan kanan. */
+  padding: 0 20px;
+}
+
+/* Atur lebar formulir penambahan todo. */
+.todo-form {
+  /* Gunakan seluruh lebar pembungkus utama. */
+  width: 100%;
+}
+
+/* Atur tampilan daftar todo. */
+.todo-list {
+  /* Buat daftar memenuhi lebar yang tersedia. */
+  width: 100%;
+  /* Beri jarak dari formulir di atasnya. */
+  margin-top: 16px;
+  /* Tambahkan garis tipis di sekeliling daftar. */
+  border: 1px solid #dddddd;
+  /* Buat sudut daftar sedikit melengkung. */
+  border-radius: 8px;
+}
