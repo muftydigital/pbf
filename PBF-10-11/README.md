@@ -1,24 +1,18 @@
-Welcome to the NextJS base template bootstrapped using the `create-next-app`. This template supports TypeScript, but you can use normal JavaScript as well.
+# Praktikum PBF Pertemuan 10 & 11
 
-## Getting Started
+Project ini merupakan praktik kembali materi pertemuan 10 dan 11 menggunakan **Next.js**. Fokus yang saya pahami dari praktikum ini adalah perbedaan pengambilan data dari sisi server dan sisi client.
 
-Hit the run button to start the development server.
+- **Demo 1 (`/demo1`)** menggunakan `getServerSideProps()` untuk mengambil data sebelum halaman dikirim ke browser.
+- **Demo 2 (`/demo2`)** menggunakan `useEffect()` dan `fetch()` untuk mengambil data setelah halaman tampil. Data tersebut melewati API route Next.js pada `/api/get-comment`.
+- **API route** menggunakan Axios untuk mengambil contoh data komentar dari JSONPlaceholder.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Kode utama sudah diberi komentar menggunakan bahasa sederhana sesuai pemahaman saya saat mempelajari kembali alur program.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on `/api/hello`. This endpoint can be edited in `pages/api/hello.ts`.
+## Menjalankan project
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Productionizing your Next App
-
-To make your next App run smoothly in production make sure to [turn this repl to an always-on repl.](https://docs.replit.com/hosting/enabling-always-on)
-
-You can also produce a production build by running `npm run build` and [changing the run command](https://docs.replit.com/programming-ide/configuring-repl#run) to `npm run start`.
+Pada paket Replit, server development sudah disiapkan agar berjalan pada host `0.0.0.0` dan port `5000` supaya Preview dapat terbaca dengan benar.

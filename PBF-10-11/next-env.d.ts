@@ -1,5 +1,5 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 
-// NOTE: This file should not be edited
-// see https://nextjs.org/docs/basic-features/typescript for more information.
+// File ini dibuat dan digunakan otomatis oleh Next.js untuk dukungan tipe.
+// Isinya tidak perlu diubah secara manual saat mengerjakan praktikum.
