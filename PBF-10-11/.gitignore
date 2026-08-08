@@ -1,0 +1,21 @@
+# Folder dependensi tidak perlu disimpan ke Git karena bisa dibuat lagi lewat npm install.
+/node_modules
+# Folder hasil build Next.js tidak perlu diupload karena dibuat otomatis.
+/.next/
+# Folder hasil export statis jika suatu saat digunakan.
+/out/
+# Folder coverage hanya diperlukan saat proses testing.
+/coverage
+# File log npm tidak perlu disimpan ke repository.
+npm-debug.log*
+# File log yarn juga tidak perlu disimpan.
+yarn-debug.log*
+yarn-error.log*
+# File environment lokal dapat berisi konfigurasi khusus komputer masing-masing.
+.env*.local
+# Folder Vercel berisi konfigurasi lokal deployment Vercel.
+.vercel
+# File cache TypeScript dibuat otomatis oleh compiler.
+*.tsbuildinfo
+# File bawaan macOS tidak berhubungan dengan source code project.
+.DS_Store
