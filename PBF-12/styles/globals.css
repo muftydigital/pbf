@@ -1,0 +1,280 @@
+/* Directive ini memasukkan style dasar Tailwind. */
+@tailwind base;
+/* Directive ini memasukkan layer komponen Tailwind. */
+@tailwind components;
+/* Directive ini memasukkan utility Tailwind. */
+@tailwind utilities;
+
+/* Semua elemen memakai border-box supaya perhitungan lebar lebih mudah. */
+* {
+  box-sizing: border-box;
+}
+
+/* Pengaturan dasar halaman dibuat sederhana dan nyaman dibaca. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+/* Link mengikuti warna komponen dan garis bawah bawaan dihilangkan. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Tombol dan input memakai font yang sama dengan halaman. */
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* Wadah utama membatasi lebar agar konten tidak terlalu melebar di layar besar. */
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 52px 0;
+}
+
+/* Halaman form dibuat lebih sempit supaya mudah dibaca. */
+.narrow-page {
+  max-width: 760px;
+}
+
+/* Header memakai flex agar judul dan tombol tambah bisa sejajar. */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+/* Label kecil di atas judul dipakai sebagai identitas praktikum. */
+.eyebrow {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Judul dibuat menonjol tetapi tetap responsif. */
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.1;
+}
+
+/* Subtitle memakai warna lebih lembut agar hierarki teks terlihat. */
+.subtitle {
+  max-width: 720px;
+  margin: 0;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* Card menjadi panel putih untuk tabel dan form. */
+.card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.06);
+}
+
+/* Form membutuhkan ruang di dalam card. */
+.form-card {
+  padding: 28px;
+}
+
+/* Form disusun vertikal agar setiap input mudah dibaca. */
+.contact-form {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* Label dibuat sedikit lebih tebal dari teks biasa. */
+.contact-form label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Input dan textarea menggunakan gaya yang sama agar konsisten. */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #172033;
+  background: #ffffff;
+  outline: none;
+}
+
+/* Border berubah ketika input sedang aktif. */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Textarea diberi tinggi minimum supaya alamat lebih nyaman ditulis. */
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Pesan validasi dibuat merah dan dekat dengan input terkait. */
+.error-text {
+  margin: -4px 0 0;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+/* Tombol utama dipakai untuk aksi tambah dan simpan. */
+.primary-button {
+  border: 0;
+  border-radius: 11px;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Tombol submit pada form diberi jarak dari field terakhir. */
+.contact-form .primary-button {
+  margin-top: 14px;
+}
+
+/* Tombol yang sedang disabled tidak bisa diklik dan dibuat lebih redup. */
+.primary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Link berbentuk tombol dibuat inline-flex supaya posisi teks tetap rapi. */
+.link-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tombol edit memakai warna netral agar berbeda dari aksi utama. */
+.secondary-button {
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 8px 11px;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Tombol hapus dibuat merah karena termasuk aksi berisiko. */
+.danger-button {
+  border: 0;
+  border-radius: 9px;
+  padding: 8px 11px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Tombol edit dan hapus disusun sejajar. */
+.action-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Pembungkus ini membuat tabel dapat digeser di HP tanpa merusak layout. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* Tabel mengambil lebar penuh card dan menggabungkan border. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+/* Header dan isi tabel memakai padding yang sama. */
+th,
+td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Header tabel diberi latar tipis supaya mudah dibedakan. */
+th {
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Baris paling bawah tidak membutuhkan garis tambahan. */
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Teks loading atau data kosong diberi ruang agar tidak menempel pada tepi card. */
+.empty-state {
+  margin: 0;
+  padding: 30px;
+  color: #64748b;
+  text-align: center;
+}
+
+/* Pesan status dipakai untuk informasi berhasil maupun gagal. */
+.status-message {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* Error dari server dibedakan dengan latar merah muda. */
+.error-status {
+  margin-top: 18px;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* Link kembali diberi jarak sebelum card form. */
+.back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Pada layar kecil, jarak halaman dan card dikurangi supaya lebih lega. */
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 24px, 1120px);
+    padding: 28px 0;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+}

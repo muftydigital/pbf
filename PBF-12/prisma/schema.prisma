@@ -1,0 +1,27 @@
+// Generator ini membuat Prisma Client yang nanti dipanggil dari file JavaScript.
+generator client {
+  // Provider prisma-client-js digunakan karena project dibuat dengan JavaScript.
+  provider = "prisma-client-js"
+}
+
+// Datasource menjelaskan database yang digunakan oleh Prisma.
+datasource db {
+  // SQLite dipilih supaya praktikum bisa berjalan tanpa server database tambahan.
+  provider = "sqlite"
+  // Alamat database dibaca dari DATABASE_URL agar bisa dibedakan antara lokal dan Replit.
+  url      = env("DATABASE_URL")
+}
+
+// Model Contact menjadi bentuk tabel data kontak pada database.
+model Contact {
+  // id menjadi primary key dan bertambah otomatis setiap membuat data baru.
+  id      Int    @id @default(autoincrement())
+  // name menyimpan nama kontak.
+  name    String
+  // email menyimpan alamat email kontak.
+  email   String
+  // phone memakai String supaya angka nol di depan nomor telepon tidak hilang.
+  phone   String
+  // address menyimpan alamat singkat kontak.
+  address String
+}

@@ -1,0 +1,12 @@
+# Dependency akan dibuat ulang saat npm install sehingga tidak perlu disimpan di Git.
+node_modules/
+# Folder ini adalah hasil build Next.js dan akan dibuat ulang saat npm run build.
+.next/
+# Log npm tidak dibutuhkan di repository.
+npm-debug.log*
+# Database kerja lokal dibuat otomatis dari template saat aplikasi dijalankan.
+prisma/dev.db
+# File journal SQLite juga tidak perlu disimpan.
+prisma/dev.db-journal
+# File sistem macOS tidak diperlukan di source project.
+.DS_Store
