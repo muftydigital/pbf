@@ -1,0 +1,41 @@
+/* Class App dipakai oleh div utama aplikasi. */
+.App {
+    /* Memberi jarak 10px dari sisi kiri halaman. */
+    margin-left: 10px;
+}
+
+/* Style ini berlaku untuk semua elemen ul. */
+ul {
+    /* Tanda bullet bawaan list dihilangkan. */
+    list-style-type: none;
+    /* Padding bawaan ul dibuat nol supaya list lebih rata. */
+    padding: 0;
+}
+
+/* Style ini berlaku untuk setiap li yang ada di dalam ul. */
+ul li {
+    /* Memberi jarak antar item dan ruang di sisi kanan. */
+    margin: 10px 10px 10px 0;
+}
+
+/* Class complete dipakai pada todo yang sudah ditandai selesai. */
+span.complete {
+    /* Teks todo diberi garis coret sebagai tanda sudah selesai. */
+    text-decoration: line-through;
+    /* Teks dibuat memiliki kapitalisasi yang lebih rapi. */
+    text-transform: capitalize;
+}
+
+/* Class delete-btn dipakai untuk tombol hapus berbentuk huruf X. */
+span.delete-btn {
+    /* Latar tombol hapus dibuat merah supaya mudah terlihat. */
+    background-color: red;
+    /* Warna tulisan dibuat putih agar kontras dengan latar merah. */
+    color: white;
+    /* Cursor berubah menjadi pointer untuk menandakan elemen bisa diklik. */
+    cursor: pointer;
+    /* Padding memberi sedikit ruang di sekitar huruf X. */
+    padding: 3px;
+    /* Tombol hapus diletakkan di sisi kanan item. */
+    float: right;
+}
