@@ -1,0 +1,59 @@
+/* Selector html dan body dipakai untuk mengatur gaya dasar seluruh halaman. */
+html,
+body {
+  /* Padding bawaan halaman dibuat nol agar layout tidak memiliki jarak tambahan. */
+  padding: 0;
+  /* Margin bawaan browser juga dibuat nol. */
+  margin: 0;
+  /* Font menggunakan beberapa pilihan font sistem sebagai cadangan. */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    /* Baris lanjutan ini melengkapi daftar font cadangan yang bisa digunakan browser. */
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* Menutup aturan untuk html dan body. */
+}
+
+/* Semua link memakai warna yang mengikuti elemen induknya. */
+a {
+  /* inherit membuat warna link mengikuti warna teks di sekitarnya. */
+  color: inherit;
+  /* Garis bawah link dihilangkan supaya tampilan lebih bersih. */
+  text-decoration: none;
+/* Menutup aturan untuk link. */
+}
+
+/* Tanda bintang memilih semua elemen yang ada di halaman. */
+* {
+  /* border-box membuat perhitungan ukuran elemen lebih mudah karena padding masuk ke ukuran total. */
+  box-sizing: border-box;
+/* Menutup aturan untuk semua elemen. */
+}
+
+/* Tabel diberi jarak agar data Demo 1 dan Demo 2 lebih nyaman dibaca. */
+table {
+  /* Border tabel digabung supaya garis antar sel terlihat rapi. */
+  border-collapse: collapse;
+  /* Margin memberi jarak tabel dari tepi halaman. */
+  margin: 32px auto;
+  /* Lebar tabel menyesuaikan layar dan tetap menyisakan ruang di kanan kiri. */
+  width: min(1000px, calc(100% - 32px));
+/* Menutup aturan tabel. */
+}
+
+/* th dan td sama-sama merupakan sel yang ada di dalam tabel. */
+th,
+td {
+  /* Border tipis membantu memisahkan setiap data. */
+  border: 1px solid #dddddd;
+  /* Padding memberi ruang antara teks dan garis sel. */
+  padding: 10px;
+  /* Isi tabel diratakan ke kiri agar mudah dibaca. */
+  text-align: left;
+/* Menutup aturan sel tabel. */
+}
+
+/* Bagian th atau kepala tabel dibuat sedikit berbeda dari isi. */
+th {
+  /* Warna latar sederhana membantu membedakan judul kolom. */
+  background: #f4f4f4;
+/* Menutup aturan kepala tabel. */
+}

@@ -1,0 +1,211 @@
+/* Container membungkus seluruh bagian halaman utama. */
+.container {
+  /* Padding memberi ruang di sisi kanan dan kiri halaman. */
+  padding: 0 2rem;
+/* Menutup aturan container. */
+}
+
+/* Main menjadi area utama untuk judul dan menu praktikum. */
+.main {
+  /* Tinggi minimal dibuat satu layar penuh supaya konten berada di area yang cukup luas. */
+  min-height: 100vh;
+  /* Padding atas dan bawah memberi ruang pada isi utama. */
+  padding: 4rem 0;
+  /* Flex 1 membuat bagian main menggunakan ruang yang tersedia. */
+  flex: 1;
+  /* Display flex dipakai untuk mempermudah penyusunan isi. */
+  display: flex;
+  /* Isi utama disusun dari atas ke bawah. */
+  flex-direction: column;
+  /* Konten diposisikan di tengah secara vertikal. */
+  justify-content: center;
+  /* Konten diposisikan di tengah secara horizontal. */
+  align-items: center;
+/* Menutup aturan main. */
+}
+
+/* Footer digunakan untuk bagian paling bawah halaman. */
+.footer {
+  /* Footer memakai flex agar isi mudah diposisikan. */
+  display: flex;
+  /* Flex 1 memberi kemampuan footer memakai ruang yang tersedia. */
+  flex: 1;
+  /* Padding memberi jarak di dalam footer. */
+  padding: 2rem 0;
+  /* Garis atas menjadi pemisah antara isi utama dan footer. */
+  border-top: 1px solid #eaeaea;
+  /* Isi footer diratakan ke tengah secara horizontal. */
+  justify-content: center;
+  /* Isi footer juga diratakan ke tengah secara vertikal. */
+  align-items: center;
+/* Menutup aturan footer. */
+}
+
+/* Aturan ini hanya berlaku untuk link yang berada di dalam footer. */
+.footer a {
+  /* Link footer dibuat sebagai flex container. */
+  display: flex;
+  /* Isi link ditempatkan di tengah secara horizontal. */
+  justify-content: center;
+  /* Isi link ditempatkan di tengah secara vertikal. */
+  align-items: center;
+  /* Link diizinkan membesar mengikuti ruang footer. */
+  flex-grow: 1;
+/* Menutup aturan link footer. */
+}
+
+/* Link yang ada di dalam judul diberi warna biru. */
+.title a {
+  /* Warna biru dipakai untuk membedakan link dari teks biasa. */
+  color: #0070f3;
+  /* Garis bawah link dihilangkan pada kondisi normal. */
+  text-decoration: none;
+/* Menutup aturan link pada title. */
+}
+
+/* Tiga kondisi ini mengatur link judul saat diarahkan, difokuskan, atau ditekan. */
+.title a:hover,
+.title a:focus,
+.title a:active {
+  /* Garis bawah muncul sebagai tanda bahwa link sedang aktif atau dipilih. */
+  text-decoration: underline;
+/* Menutup aturan interaksi link. */
+}
+
+/* Title mengatur ukuran dan jarak judul utama. */
+.title {
+  /* Margin dibuat nol agar tidak ada jarak bawaan yang mengganggu layout. */
+  margin: 0;
+  /* Line-height mengatur jarak tinggi baris judul. */
+  line-height: 1.15;
+  /* Ukuran font dibuat besar supaya judul mudah terlihat. */
+  font-size: 4rem;
+/* Menutup aturan title. */
+}
+
+/* Title dan description sama-sama diratakan ke tengah. */
+.title,
+.description {
+  /* Teks dibuat rata tengah. */
+  text-align: center;
+/* Menutup aturan perataan teks. */
+}
+
+/* Description mengatur tampilan teks deskripsi jika digunakan. */
+.description {
+  /* Margin memberi jarak vertikal pada deskripsi. */
+  margin: 4rem 0;
+  /* Line-height membuat jarak antarbaris lebih nyaman. */
+  line-height: 1.5;
+  /* Ukuran teks deskripsi dibuat lebih besar dari teks biasa. */
+  font-size: 1.5rem;
+/* Menutup aturan description. */
+}
+
+/* Class code bisa dipakai untuk menampilkan potongan kode dengan tampilan berbeda. */
+.code {
+  /* Latar abu-abu terang membedakan kode dari bagian lain. */
+  background: #fafafa;
+  /* Sudut dibuat sedikit membulat. */
+  border-radius: 5px;
+  /* Padding memberi ruang di dalam area kode. */
+  padding: 0.75rem;
+  /* Ukuran font dibuat cukup nyaman dibaca. */
+  font-size: 1.1rem;
+  /* Font monospace dipakai agar tampilan kode lebih sesuai. */
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    /* Baris ini melanjutkan daftar font monospace cadangan. */
+    Bitstream Vera Sans Mono, Courier New, monospace;
+/* Menutup aturan code. */
+}
+
+/* Grid menjadi tempat kartu menu Demo 1 dan Demo 2. */
+.grid {
+  /* Flex digunakan supaya kartu bisa tersusun fleksibel. */
+  display: flex;
+  /* Kartu disejajarkan di tengah secara vertikal. */
+  align-items: center;
+  /* Kartu diratakan ke tengah secara horizontal. */
+  justify-content: center;
+  /* flex-wrap membuat kartu turun ke baris berikutnya jika ruang tidak cukup. */
+  flex-wrap: wrap;
+  /* Lebar grid dibatasi agar tidak terlalu melebar. */
+  max-width: 800px;
+/* Menutup aturan grid. */
+}
+
+/* Card mengatur tampilan masing-masing pilihan menu. */
+.card {
+  /* Margin memberi jarak antar kartu. */
+  margin: 1rem;
+  /* Padding memberi ruang di dalam kartu. */
+  padding: 1.5rem;
+  /* Teks kartu diratakan ke kiri. */
+  text-align: left;
+  /* Warna teks mengikuti warna dari elemen induknya. */
+  color: inherit;
+  /* Garis bawah pada link dihilangkan. */
+  text-decoration: none;
+  /* Border tipis membentuk batas kartu. */
+  border: 1px solid #eaeaea;
+  /* Sudut kartu dibuat membulat. */
+  border-radius: 10px;
+  /* Transition membuat perubahan warna saat hover terasa lebih halus. */
+  transition: color 0.15s ease, border-color 0.15s ease;
+  /* Lebar kartu dibatasi agar ukurannya tetap rapi. */
+  max-width: 300px;
+/* Menutup aturan card. */
+}
+
+/* Kondisi ini berlaku ketika kartu disentuh pointer, mendapat fokus, atau sedang aktif. */
+.card:hover,
+.card:focus,
+.card:active {
+  /* Warna teks berubah menjadi biru sebagai respons interaksi. */
+  color: #0070f3;
+  /* Warna border juga berubah menjadi biru. */
+  border-color: #0070f3;
+/* Menutup aturan interaksi card. */
+}
+
+/* Judul h2 yang berada di dalam card memiliki aturan sendiri. */
+.card h2 {
+  /* Margin bawah memisahkan judul dengan deskripsi. */
+  margin: 0 0 1rem 0;
+  /* Ukuran font judul kartu dibuat lebih besar. */
+  font-size: 1.5rem;
+/* Menutup aturan h2 card. */
+}
+
+/* Paragraf di dalam card digunakan sebagai penjelasan menu. */
+.card p {
+  /* Margin bawaan paragraf dibuat nol. */
+  margin: 0;
+  /* Ukuran font dibuat sedikit lebih besar dari teks standar. */
+  font-size: 1.25rem;
+  /* Jarak antarbaris diatur agar teks nyaman dibaca. */
+  line-height: 1.5;
+/* Menutup aturan paragraf card. */
+}
+
+/* Logo kecil pada footer mempunyai aturan tinggi dan jarak. */
+.logo {
+  /* Tinggi logo mengikuti ukuran satu em dari teks. */
+  height: 1em;
+  /* Margin kiri memberi jarak antara tulisan dan logo. */
+  margin-left: 0.2rem;
+/* Menutup aturan logo. */
+}
+
+/* Media query ini aktif ketika lebar layar maksimal 600 piksel. */
+@media (max-width: 600px) {
+  /* Grid dibuat menyesuaikan layar kecil. */
+  .grid {
+    /* Lebar grid dibuat memenuhi area yang tersedia. */
+    width: 100%;
+    /* Kartu disusun ke bawah agar nyaman dilihat di layar kecil. */
+    flex-direction: column;
+  /* Menutup aturan grid untuk layar kecil. */
+  }
+/* Menutup media query. */
+}
