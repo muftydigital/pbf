@@ -1,0 +1,39 @@
+{
+  "name": "assetku",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AssetKu - Aplikasi Inventaris Barang berbasis Next.js, Redux, dan Prisma (SQLite)",
+  "scripts": {
+    "dev": "node scripts/prepare-db.js && next dev --webpack",
+    "build": "next build --webpack",
+    "start": "node scripts/prepare-db.js && next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "node prisma/seed.js",
+    "db:studio": "prisma studio",
+    "setup": "prisma db push && node prisma/seed.js",
+    "prepare-db": "node scripts/prepare-db.js"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "dependencies": {
+    "@prisma/client": "5.22.0",
+    "@reduxjs/toolkit": "^2.12.0",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-redux": "^9.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "prisma": "5.22.0",
+    "tailwindcss": "^4"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

@@ -1,0 +1,67 @@
+// ==========================================================================
+// Prisma Schema - AssetKu (Aplikasi Inventaris Barang)
+// ==========================================================================
+// File ini mendefinisikan struktur database (model/tabel) yang digunakan
+// oleh aplikasi. Prisma akan membaca file ini untuk men-generate Prisma
+// Client (kode JavaScript untuk mengakses database dengan aman & mudah).
+
+// generator: menentukan "output" apa yang dihasilkan Prisma dari schema ini.
+// "prisma-client-js" akan menghasilkan Prisma Client versi klasik (JS/TS)
+// yang bisa langsung di-import dari "@prisma/client".
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource: menentukan database apa yang dipakai & dari mana connection
+// string-nya diambil. Di sini kita memakai SQLite (sesuai kriteria tugas),
+// dan lokasi file database diambil dari variabel DATABASE_URL di file .env
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------------------------------------------
+// Model Category
+// Merepresentasikan kategori/jenis barang, misalnya: Elektronik,
+// Furnitur, Alat Tulis Kantor (ATK), Kendaraan, dsb.
+// Satu kategori bisa memiliki banyak Asset (relasi one-to-many).
+// ------------------------------------------------------------------------
+model Category {
+  id          Int      @id @default(autoincrement()) // ID unik kategori (primary key)
+  name        String   @unique // nama kategori, harus unik (tidak boleh duplikat)
+  description String? // deskripsi singkat kategori (opsional)
+  createdAt   DateTime @default(now()) // waktu kategori dibuat, otomatis diisi
+
+  // Relasi: satu kategori dapat memiliki banyak aset
+  assets Asset[]
+
+  // Nama tabel fisik di database dibuat eksplisit agar rapi
+  @@map("categories")
+}
+
+// ------------------------------------------------------------------------
+// Model Asset
+// Merepresentasikan satu barang/aset yang dimiliki organisasi/instansi,
+// contoh: Laptop, Meja Kerja, Proyektor, Printer, dsb.
+// ------------------------------------------------------------------------
+model Asset {
+  id           Int       @id @default(autoincrement()) // ID unik aset (primary key)
+  code         String    @unique // kode aset unik, contoh: AST-0001
+  name         String // nama barang/aset
+  quantity     Int       @default(1) // jumlah/stok barang yang tersedia
+  unit         String    @default("unit") // satuan barang, misal: pcs, unit, box
+  location     String? // lokasi penyimpanan/penempatan barang (opsional)
+  condition    String    @default("Baik") // kondisi barang: Baik | Rusak Ringan | Rusak Berat
+  price        Float     @default(0) // harga satuan barang (dalam Rupiah)
+  purchaseDate DateTime? // tanggal barang dibeli/diperoleh (opsional)
+  notes        String? // catatan tambahan tentang barang (opsional)
+  createdAt    DateTime  @default(now()) // waktu data dibuat, otomatis diisi
+  updatedAt    DateTime  @updatedAt // waktu data terakhir diubah, otomatis diperbarui
+
+  // Relasi: setiap aset wajib memiliki satu kategori
+  categoryId Int
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  // Nama tabel fisik di database dibuat eksplisit agar rapi
+  @@map("assets")
+}
