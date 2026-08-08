@@ -1,0 +1,114 @@
+/* Atur bagian utama pada halaman contoh API. */
+main {
+  /* Buat seluruh teks berada di tengah. */
+  text-align: center;
+  /* Gunakan flexbox agar susunan isi mudah diatur. */
+  display: flex;
+  /* Susun elemen dari atas ke bawah. */
+  flex-direction: column;
+  /* Beri jarak dari sisi atas halaman. */
+  margin-top: 30px;
+  /* Ukuran dasar mengikuti ruang yang tersedia. */
+  flex-basis: auto;
+}
+
+/* Terapkan perhitungan ukuran yang sama pada seluruh elemen. */
+* {
+  /* Padding dan border ikut dihitung di dalam lebar elemen. */
+  box-sizing: border-box;
+}
+
+/* Atur gaya dasar untuk isi halaman. */
+body {
+  /* Gunakan jenis huruf yang sederhana dan mudah dibaca. */
+  font-family: Arial, Helvetica, sans-serif;
+  /* Hilangkan jarak bawaan agar tampilan lebih teratur. */
+  margin: 0;
+  /* Tambahkan ruang di sisi halaman. */
+  padding: 20px;
+}
+
+/* Beri jarak antaritem pada daftar navigasi utama. */
+nav ul {
+  /* Susun menu secara mendatar. */
+  display: flex;
+  /* Hilangkan tanda titik bawaan pada list. */
+  list-style: none;
+  /* Beri jarak yang sama di antara menu. */
+  gap: 18px;
+  /* Hilangkan padding bawaan dari elemen ul. */
+  padding: 0;
+}
+
+/* Atur tampilan setiap link navigasi. */
+nav a {
+  /* Hilangkan garis bawah bawaan pada link. */
+  text-decoration: none;
+  /* Gunakan warna biru agar link mudah dikenali. */
+  color: #2457a7;
+  /* Buat tulisan menu sedikit lebih tebal. */
+  font-weight: 600;
+}
+
+/* Satu kolom mengambil seperempat lebar pada layar besar. */
+.column {
+  /* Letakkan beberapa kolom dalam satu baris. */
+  float: left;
+  /* Empat kolom dapat tampil berdampingan. */
+  width: 25%;
+  /* Beri ruang di sisi kiri dan kanan kolom. */
+  padding: 0 10px;
+  /* Beri jarak dengan baris di bawahnya. */
+  margin-bottom: 30px;
+}
+
+/* Sesuaikan jarak baris dengan padding yang ada pada kolom. */
+.row {
+  /* Margin negatif menjaga posisi kartu tetap sejajar. */
+  margin: 0 -5px;
+}
+
+/* Bersihkan pengaruh float setelah seluruh kolom. */
+.row::after {
+  /* Buat isi kosong untuk elemen pembersih. */
+  content: '';
+  /* Elemen dibuat seperti tabel agar clear dapat bekerja. */
+  display: table;
+  /* Hentikan float dari kedua sisi. */
+  clear: both;
+}
+
+/* Sesuaikan susunan kolom saat lebar layar maksimal 600 piksel. */
+@media screen and (max-width: 600px) {
+  /* Aturan ini hanya berlaku pada kolom di layar kecil. */
+  .column {
+    /* Satu kartu memakai seluruh lebar layar. */
+    width: 100%;
+    /* Gunakan flex agar isi tetap mudah disusun. */
+    display: flex;
+    /* Beri jarak antar kartu pada tampilan seluler. */
+    margin-bottom: 20px;
+  }
+}
+
+/* Atur tampilan kotak untuk setiap data foto. */
+.card {
+  /* Tambahkan bayangan tipis di sekeliling kartu. */
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  /* Beri ruang antara isi dan tepi kartu. */
+  padding: 16px;
+  /* Buat isi kartu rata tengah. */
+  text-align: center;
+  /* Gunakan warna abu-abu muda sebagai latar kartu. */
+  background-color: #f1f1f1;
+  /* Gunakan seluruh lebar yang tersedia. */
+  width: 100%;
+}
+
+/* Atur tombol yang muncul ketika permintaan API gagal. */
+button {
+  /* Beri ruang yang cukup di dalam tombol. */
+  padding: 8px 16px;
+  /* Tampilkan kursor tangan ketika tombol diarahkan. */
+  cursor: pointer;
+}
