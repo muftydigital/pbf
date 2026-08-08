@@ -1,0 +1,45 @@
+/* Atur tampilan untuk bagian utama aplikasi. */
+main {
+  /* Semua teks dibuat rata tengah. */
+  text-align: center;
+  /* Gunakan flexbox agar susunan elemen mudah diatur. */
+  display: flex;
+  /* Susun setiap elemen dari atas ke bawah. */
+  flex-direction: column;
+  /* Beri jarak dari bagian atas halaman. */
+  margin-top: 30px;
+  /* Ukuran dasar mengikuti ruang yang tersedia. */
+  flex-basis: auto;
+  /* Beri jarak yang sama di antara elemen. */
+  gap: 12px;
+  /* Posisikan semua isi tepat di tengah. */
+  align-items: center;
+}
+
+/* Atur susunan setiap kelompok label dan input. */
+form div {
+  /* Label dan input ditampilkan berurutan ke bawah. */
+  display: flex;
+  /* Susun isi secara vertikal. */
+  flex-direction: column;
+  /* Tambahkan jarak di bawah setiap kolom. */
+  margin-bottom: 12px;
+  /* Teks label dibuat rata kiri agar mudah dibaca. */
+  text-align: left;
+}
+
+/* Beri ukuran yang nyaman pada kolom input. */
+input {
+  /* Tambahkan ruang di dalam kolom. */
+  padding: 8px;
+  /* Batasi lebar agar form tidak terlalu panjang. */
+  width: 240px;
+}
+
+/* Atur tampilan tombol formulir. */
+button {
+  /* Beri ruang di bagian dalam tombol. */
+  padding: 8px 16px;
+  /* Ubah kursor sebagai tanda tombol bisa diklik. */
+  cursor: pointer;
+}
