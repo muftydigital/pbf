@@ -1,0 +1,7 @@
+/* Atur tampilan bagian utama halaman. */
+main {
+  /* Buat semua teks rata tengah. */
+  text-align: center;
+  /* Atur posisi vertikal ke tengah jika elemennya mendukung. */
+  vertical-align: center;
+}
