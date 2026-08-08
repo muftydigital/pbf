@@ -1,0 +1,19 @@
+/* Atur tampilan bagian utama halaman. */
+main {
+  /* Buat teks rata tengah. */
+  text-align: center;
+  /* Atur posisi vertikal ke tengah jika elemennya mendukung. */
+  vertical-align: center;
+}
+
+/* Style untuk bagian header. */
+header {
+  /* Warna latar header. */
+  background-color: blueviolet;
+  /* Warna teks dibuat putih. */
+  color: white;
+  /* Beri jarak antara isi dan tepi header. */
+  padding: 10px;
+  /* Pakai font Lato, kalau tidak ada gunakan sans-serif. */
+  font-family: Lato, sans-serif;
+}
